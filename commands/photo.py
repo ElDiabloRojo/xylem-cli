@@ -39,4 +39,5 @@ def upload_to_s3(img_dir, file_name):
     except NoCredentialsError:
         print("Credentials not available")
         return False
+#[TODO: add cleanup for locally created file]
 
