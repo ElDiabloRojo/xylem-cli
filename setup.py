@@ -6,6 +6,7 @@ setup(
     py_modules=['xylem'],
     install_requires=[
         'Click',
+        'picamera',
     ],
     entry_points='''
         [console_scripts]
