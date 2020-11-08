@@ -7,9 +7,10 @@ setup(
     install_requires=[
         'Click',
         'picamera',
-	    'boto3',
+        'boto3',
         'botocore',
         'paho-mqtt',
+        'sphinx_click',
     ],
     entry_points='''
         [console_scripts]
