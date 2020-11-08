@@ -28,10 +28,11 @@ def cli(img_dir, file_name, resolution, upload):
 def upload_to_s3(img_dir, file_name):
     s3 = boto3.client('s3') 
     bucket = str('xylem-bucket')
-    local_file=img_dir + file_name
+    local_file = img_dir + file_name
+    dest_key = 'dir/' + file_name 
 
     try:
-        s3.upload_file(local_file, bucket, file_name)
+        s3.upload_file(local_file, bucket, dest_key)
         print("Upload Successful")
         return True
     except FileNotFoundError:
